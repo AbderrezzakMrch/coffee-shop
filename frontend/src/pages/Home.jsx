@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import bgImg from '/background/image.png'; 
 import CoffeeItems from "../components/CoffeeItems";
-
+import Brands from "../components/Brands";
 
 
 function Home() {
@@ -33,6 +33,7 @@ function Home() {
         </div>
       </div>
       <CoffeeItems/>
+      <Brands/>
 
     </>
   );

@@ -38,7 +38,7 @@ const coffees = [
   },
 ];
   return (
-    <section className="px-4 py-12 md:px-10">
+    <section className="px-4 py-12 md:px-10" id="explore">
         {/* First Header */}
         <div className="flex items-center justify-center my-10">
         <div className="border-t-8 border-[#A0583C] flex-grow mx-4"></div>

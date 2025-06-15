@@ -4,7 +4,9 @@ function App() {
 
 
   return (
-    <AppRoutes/>
+    <div className="App">
+      <AppRoutes />
+    </div>
   )
 }
 

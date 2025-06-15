@@ -3,13 +3,14 @@ import Navbar from "../components/Navbar";
 import bgImg from '/background/image.png'; 
 import CoffeeItems from "../components/CoffeeItems";
 import Brands from "../components/Brands";
-
+import Contact from "../components/Contact";
+import Footer from "../components/footer";
 
 function Home() {
   return (
     <>
       <Navbar />
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-screen" id="home">
         {/* Background image */}
         <img 
           src={bgImg} 
@@ -27,14 +28,17 @@ function Home() {
             Start your exciting day with a cup of Brew Coffee
           </p>
           </div>
+          <a href="#explore">
             <button className="text-2xl pb-4 bg-gradient-to-r from-[#A0583C] to-[#C08267] hover:from-[#C08267] hover:to-[#A0583C] transition text-[#FFFADA] font-medium rounded-2xl px-14 py-3">
             Explore Us
             </button>
+            </a>
         </div>
       </div>
       <CoffeeItems/>
       <Brands/>
-
+      <Contact/>
+      <Footer/>
     </>
   );
 }

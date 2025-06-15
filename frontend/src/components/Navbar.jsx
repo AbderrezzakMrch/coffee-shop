@@ -64,7 +64,7 @@ function Navbar() {
           <ul className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-12 flex-col p-4 md:p-0 mt-4 text-xl font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li>
               <a
-                href="#"
+                href="#home"
                 className="block py-2 px-3 text-white rounded md:bg-transparent md:hover:text-[#C08267] transition md:p-0"
                 aria-current="page"
               >
@@ -73,7 +73,7 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#explore"
                 className="block py-2 px-3 text-white rounded md:hover:text-[#C08267] transition md:p-0"
               >
                 Explore Us
@@ -81,7 +81,7 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#brands"
                 className="block py-2 px-3 text-white rounded md:hover:bg-transparent md:hover:text-[#C08267] transition md:p-0"
               >
                 Brands
@@ -89,7 +89,7 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#Contact us"
                 className="block py-2 px-3 text-white rounded  md:hover:bg-transparent md:hover:text-[#C08267] transition md:p-0"
               >
                 Contact us

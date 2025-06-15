@@ -1,12 +1,39 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faApple } from "@fortawesome/free-brands-svg-icons";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+
+
+  useEffect(()=>{
+    const handleScrool = () => {
+      if (window.scrollY > 20){
+        setIsScrolled(true);
+      }else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll",handleScrool);
+    return () => window.removeEventListener("scroll",handleScrool);
+  },[]);
+
+  const inHover = ()=> setIsScrolled(true);
+  const outHover = ()=> {
+    if(window.scrollY <= 20) {
+      setIsScrolled(false);
+    }
+  };
+
 
   return (
-    <nav className="fixed w-full z-20 top-0 start-0">
+    <nav className={`fixed w-full z-20 top-0 start-0 transition-colors duration-300 ${isScrolled ? "bg-[#C08267]" : "bg-transparent"}`}
+    onMouseEnter={inHover}
+    onMouseLeave={outHover}
+    >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo/Brand */}
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -65,7 +92,7 @@ function Navbar() {
             <li>
               <a
                 href="#home"
-                className="block py-2 px-3 text-white rounded md:bg-transparent md:hover:text-[#C08267] transition md:p-0"
+                className="block py-2 px-3 text-white rounded md:bg-transparent md:hover:text-black transition md:p-0"
                 aria-current="page"
               >
                 Home
@@ -74,7 +101,7 @@ function Navbar() {
             <li>
               <a
                 href="#explore"
-                className="block py-2 px-3 text-white rounded md:hover:text-[#C08267] transition md:p-0"
+                className="block py-2 px-3 text-white rounded md:hover:text-black transition md:p-0"
               >
                 Explore Us
               </a>
@@ -82,7 +109,7 @@ function Navbar() {
             <li>
               <a
                 href="#brands"
-                className="block py-2 px-3 text-white rounded md:hover:bg-transparent md:hover:text-[#C08267] transition md:p-0"
+                className="block py-2 px-3 text-white rounded md:hover:bg-transparent md:hover:text-black transition md:p-0"
               >
                 Brands
               </a>
@@ -90,7 +117,7 @@ function Navbar() {
             <li>
               <a
                 href="#Contact us"
-                className="block py-2 px-3 text-white rounded  md:hover:bg-transparent md:hover:text-[#C08267] transition md:p-0"
+                className="block py-2 px-3 text-white rounded  md:hover:bg-transparent md:hover:text-black transition md:p-0"
               >
                 Contact us
               </a>

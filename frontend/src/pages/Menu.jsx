@@ -1,5 +1,5 @@
 import React from "react";
-import Coffee from "../components/coffee";
+import Coffee from "../components/Coffee";
 import Footer from "../components/footer";
 import aboutImage from '/about page/small-coffee-shop-coffee-kyoto-japan-WG9GPP.jpg'; 
 

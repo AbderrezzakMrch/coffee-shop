@@ -8,7 +8,7 @@ function Footer() {
         <hr className="border-t-4 border-[#FFFADA] mb-3" />
         <div className="flex justify-center items-center gap-2 font-semibold">
           <FaRegCopyright className="text-white" />
-          <span className="italic text-3xl">Filtro</span>
+          <span className="italic text-3xl">Abderrezzak Dev</span>
           <span className="not-italic text-2xl">All Rights Reserved</span>
         </div>
       </div>
